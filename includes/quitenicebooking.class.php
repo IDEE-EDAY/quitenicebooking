@@ -1737,7 +1737,7 @@ class Quitenicebooking {
 		// email guest
 		$mailfrom = array('email' => !empty($this->settings['email_address']) ? $this->settings['email_address'] : get_bloginfo('admin_email'), 'name' => get_bloginfo('name'));
 		$mailto = array('email' => $booking['guest_email']);
-		$mailsubject = html_entity_decode(sprintf(__('%s booking confirmation', 'quitenicebooking'), get_bloginfo('name')));
+		$mailsubject = html_entity_decode(sprintf(__('%s booking confirmation [Do not reply to this email]', 'quitenicebooking'), get_bloginfo('name')));
 		$mailmessage = $this->settings['email_message'];
 		$mailmessage = preg_replace(
 			array(
