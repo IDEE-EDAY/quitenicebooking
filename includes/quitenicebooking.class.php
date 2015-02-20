@@ -1723,6 +1723,7 @@ class Quitenicebooking {
 			// build paypal query string
 			$paypal_query_str = array(
 				'business' => $this->settings['paypal_email_address'],
+				'image_url' => 'http://www.kohkredhomestay.com/wp-content/uploads/2015/02/kohkred-homestay150x43.png',
 				'cmd' => '_xclick',
 				'item_name' => get_bloginfo('name').' '.sprintf(__('Room deposit for %s %s (Booking ID: %s)'), $booking['guest_first_name'], $booking['guest_last_name'], $post_id),
 				'amount' => $data['deposit'],
